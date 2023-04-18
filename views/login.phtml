@@ -1,0 +1,20 @@
+<?php
+require_once('models/Control.php');
+require_once('templates/header.phtml'); ?>
+    <div id="login" class="card cardLogin">
+        <div class="card-body">
+            <form class="form notClickable" action="../models/Core.php" method="post">
+                <br>
+                <?php success('success'); ?>
+                <?php alert('login'); ?>
+                <label class="inputTitle" for="emailAddress">Email Address:</label><br>
+                <input type="text" name="emailAddress" value="<?php if(isset($_SESSION['email_address_log'])) echo $_SESSION['email_address_log']; ?>" required><br><br>
+                <label class="inputTitle" for="password">Password:</label><br>
+                <input type="password" name="password" required><br><br>
+                <input type="submit" value="Submit" name="login" class="btn btn-secondary"><br><br>
+                <a class="register" href="../register.php">Sign Up</a><br><br>
+                <a class="home" href="../index.php" class="text-decoration-none">Home</a><br><br>
+            </form>
+        </div>
+    </div>
+<?php require_once('templates/footer.phtml'); ?>

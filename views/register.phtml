@@ -1,0 +1,30 @@
+<?php
+require_once('templates/header.phtml'); ?>
+<div id="register" class="card cardLogin">
+    <div class="card-body">
+        <form class="form notClickable" action="../models/Core.php" method="post">
+            <br>
+            <?php '<br>'; alert('register'); ?>
+            <?php '<br>'; alert('checkFailed'); ?>
+            <label class="inputTitle" for="first_name">First Name:</label><br>
+            <input type="text" name="first_name" value="<?php if(isset($_SESSION['first_name_reg'])) echo $_SESSION['first_name_reg']; ?>"><br><br>
+            <label class="inputTitle" for="last_name">Last Name:</label><br>
+            <input type="text" name="last_name" value="<?php if(isset($_SESSION['last_name_reg'])) echo $_SESSION['last_name_reg']; ?>"><br><br>
+            <label class="inputTitle" for="username">Username:</label><br>
+            <input type="text" name="username" value="<?php if(isset($_SESSION['username_reg'])) echo $_SESSION['username_reg']; ?>" placeholder=" white spaces not allowed"><br><br>
+            <label class="inputTitle" for="email_address">Email Address</label><br>
+            <input type="text"name="email_address" value="<?php if(isset($_SESSION['email_address_reg'])) echo $_SESSION['email_address_reg']; ?>"><br><br>
+            <label class="inputTitle" for="password">Password:</label><br>
+            <input type="password" name="password" value="" placeholder="     at least 6 characters"><br><br>
+            <label class="inputTitle" for="passwordRepeat">Repeat Password:</label><br>
+            <input type="password" name="passwordRepeat" value=""><br><br>
+            <label class="inputTitle" for="humanVerification">Type the code below:</label>
+            <label class="inputTitle" for="humanVerification"></label><p class="humanVerification"><?php echo $_SESSION['verificationCode'] ?></p>
+            <input name="humanCheck" type="text" placeholder="      human verification"><br><br>
+            <input class="antispam" type="text" name="bot">
+            <input type="submit" value="Submit" name="register" class="btn btn-secondary"><br><br>
+            <a class="home" href="../login.php">Go Back</a>
+        </form>
+    </div>
+</div>
+<?php require_once('templates/footer.phtml'); ?>

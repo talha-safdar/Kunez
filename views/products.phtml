@@ -1,0 +1,60 @@
+<?php
+require_once('models/Control.php');
+require_once('templates/header.phtml'); ?>
+<div id="page-container">
+    <div id="inner-page-container">
+        <div id="content-wrap">
+            <div class="card cardBody">
+                <h1>Products list</h1>
+            </div>
+            <div class="message">
+                <p class="alertMessage">New products coming soon..</p>
+            </div>
+            <hr />
+            <div class="message">
+                <?php if (isset($_SESSION['hideDiscountForm']) && $_SESSION['hideDiscountForm'] == true)
+                    { ?>
+                <p class="underMessage">Thanks for registering with us we will let you know once the product is available to purchase.</p><?php
+                    }
+                    else
+                    { ?>
+                <p class="underMessage">Thanks for registering with us please tick the box to redeem the 20% off.</p><?php
+                    } ?>
+            </div>
+            <?php alert('discount'); ?>
+            <?php
+            if (isset($_SESSION['ignorefirstCheck']) && $_SESSION['ignorefirstCheck'] == true)
+            { ?>
+                <h1 class="thankMessage">You have redeemed the discount :)</h1> <?php
+            }
+            else if (isset($_SESSION['hideDiscountForm']) && $_SESSION['hideDiscountForm'] == true && !isset($_SESSION['ignorefirstCheck']))
+                { ?>
+
+                <h1 class="thankMessage">You have already redeemed the discount :)</h1> <?php
+                }
+                else
+                { ?>
+            <form action="/models/Core.php" method="post" id="discount">
+                <label class="containerCheckbox">
+                    <input onclick="check(this)" type="checkbox" name="initialDiscount" class="discountCheck">
+                    <span class="checkmark"></span>
+                </label><br>
+                <button type="submit" name="initialDiscountSubmitted" class="discountButton" disabled>Redeem now</button>
+            </form> </div> <?php
+                }
+                unset($_SESSION['ignorefirstCheck']); ?>
+        </div>
+    </div>
+</div>
+<div class="wrapBackButton">
+    <button onclick="location.href='../userHome.php';" class="backButton">Back</button>
+</div>
+<script>
+    $(function() {
+        $(".discountCheck").click(function(){
+            $('.discountButton').prop('disabled',$('input.discountCheck:checked').length === 0);
+        });
+    });
+</script>
+<?php require_once('templates/footer.phtml'); ?>
+

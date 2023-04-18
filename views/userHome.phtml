@@ -1,0 +1,77 @@
+<?php
+require_once('models/Control.php');
+require_once('templates/header.phtml'); ?>
+<div id="page-container" xmlns="http://www.w3.org/1999/html">
+    <div id="inner-userHome-page-container">
+        <div id="content-wrap">
+            <div class="card cardBody notClickable">
+                <h1>Welcome <?php echo $_SESSION['username'] ?> </h1>
+            </div>
+
+                <div class="row cardUser d-flex align-content-end flex-wrap notClickable">
+
+                    <div class="col-lg-6 p-2 ">
+                        <div onclick="location.href='../products.php';" class="card innerCardUser card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                            <div class="h-100 p-5 text-shadow-1">
+                                <h2 class="display-6 d-flex justify-content-center" style="margin: 15px 0 !important;">Buy Products</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-2">
+                        <div onclick="location.href='../purchased.php';"  class="card innerCardUser card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                            <div class="h-100 p-5 text-shadow-1">
+                                <h2 class="display-6 d-flex justify-content-center" style="margin: 15px 0 !important;">Purchased</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn col-12" type="button" data-bs-toggle="dropdown" aria-expanded="false">My Details</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div class="col-lg-12 p-2">
+                                <div class="h-100 overflow-hidden text-black">
+                                    <div class="">
+                                        <h2 class="display-6 d-flex justify-content-left myDetails">My details</h2>
+                                    </div>
+                                </div>
+                            </div>
+                                <div id="edit" class="col-12 dropdownElements d-flex justify-content-center flex-column">
+                                    <?php alert('edit'); ?>
+                                    <?php success('edit'); ?>
+                                    <form class="col-xs-3 d-flex formElement" action="../models/Core.php" method="post">
+                                        <input oninput="check(this)" id="first" name="first_name_box" class="form-control" data-panelid="1" placeholder="<?php echo (isset($_SESSION['first_name'])) ?  $_SESSION['first_name'] : "No data"; ?>"><button type="submit" id="first_button" name="first_name" class="editElement" disabled>edit</button>
+                                    </form>
+
+                                    <div class="col-xs-3 pt-1 d-flex formElement">
+                                        <form class="col-xs-3 d-flex formElement" action="../models/Core.php" method="post">
+                                            <input oninput="check(this)" id="last" name="last_name_box" class="form-control" data-panelid="2" placeholder="<?php echo (isset($_SESSION['first_name'])) ?  $_SESSION['last_name'] : "No data"; ?>"><button type="submit" id="last_button" name="last_name"  class="editElement" disabled>edit</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-xs-3 pt-1 display-md-12 d-flex justify-content-left">
+                                        <form class="col-xs-3 d-flex formElement" action="../models/Core.php" method="post"><!-- chaneh name for safety like id numbering instead -->
+                                            <input oninput="check(this)" id="email" name="email_address_box" class="form-control" data-panelid="3" placeholder="<?php echo (isset($_SESSION['email_address'])) ?  $_SESSION['email_address'] : "No data"; ?>"><button type="submit" id="email_button" name="email_address" class="editElement" disabled>edit</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-xs-3 pt-1 display-md-12 d-flex justify-content-left lastElement">
+                                        <form class="col-xs-3 d-flex formElement" action="../models/Core.php" method="post">
+                                            <input oninput="check(this)" id="password" name="password_box" type="password" data-panelid="4" class="form-control" placeholder="Type new password"><button type="submit" name="password" id="pass_button" class="editElement" disabled>edit</button></form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <script>
+                        $(function(){
+                            $('.dropbtn').on('click', function () {
+                                $('.dropdown-content').slideToggle(300);
+                            })
+                        });
+                    </script>
+                </div>
+        </div>
+    </div>
+</div>
+
+<?php require_once('templates/footer.phtml'); ?>

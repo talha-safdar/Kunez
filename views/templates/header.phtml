@@ -1,0 +1,24 @@
+<?php require_once('head.phtml'); ?>
+<body>
+<header class="notClickable">
+    <nav class="navbar navbar-dark bg-dark">
+        <div>
+            <a class="logoName" href="../../index.php">Kunez</a>
+        </div>
+        <div class="loginButton">
+            <?php if (isset($_SESSION['user_ID']))
+                { ?>
+            <a class="loginClick" href="../../models/Core.php?exit=logout">Log out</a> <?php
+                }
+                else if(isset($_SESSION['removeLoginButton']) && $_SESSION['removeLoginButton'] == true)
+                { ?>
+                    <?php
+                }
+                else
+                { ?>
+            <a class="loginClick" href="../../login.php">Log in</a> <?php
+                }
+            ?>
+        </div>
+    </nav>
+</header>

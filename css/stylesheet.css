@@ -1,0 +1,505 @@
+html, body {
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /*background-color: black !important;*/
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+h1 {
+    font-weight: bold !important;
+    color: lightgray;
+}
+h3 {
+    color: lightgray;
+}
+
+.notClickable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapBackButton {
+    margin: -90px auto 50px auto;
+    width: 1000px !important;
+}
+.backButton {
+    color: black;
+    background-color: #6c757d;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 1.25rem;
+}
+.backButton:link { text-decoration: none; }
+.backButton:visited { text-decoration: none; }
+.backButton:hover { text-decoration: none; background-color: darkgray; !important; }
+.backButton:active { text-decoration: none; }
+/*.backButton {*/
+/*    margin: -90px auto 50px auto;*/
+/*    padding: 0 40px;*/
+/*}*/
+
+
+/* MESSAGES STARTS */
+
+.alert {
+    color: red;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+}
+
+.success {
+    color: lawngreen;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+}
+
+/* MESSAGES ENDS */
+
+
+
+/* NAVIGATION BAR STARTS */
+
+/*.navCustom {*/
+/*    color: white;*/
+/*    border-bottom-right-radius: 20px;*/
+/*    border-bottom-left-radius: 20px;*/
+/*}*/
+
+.logoName {
+    color: lightgray;
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    margin: 0;
+}
+.logoName:link { text-decoration: none;}
+.logoName:visited { text-decoration: none; }
+.logoName:hover { text-decoration: none;  color: gray; }
+.logoName:active { text-decoration: none; }
+
+
+.loginButton {
+    text-decoration: none;
+    font-size: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.loginClick {
+    color: lightgray;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.loginClick:link { text-decoration: none; }
+.loginClick:visited { text-decoration: none; }
+.loginClick:hover { text-decoration: none; color: white; }
+.loginClick:active { text-decoration: none; }
+
+
+/*.navbar {*/
+/*    font-family: 'Luxurious Roman', cursive;*/
+/*    color: black;*/
+/*    background: rosybrown !important;*/
+/*}*/
+
+/* NAVIGATION BAR ENDS */
+
+
+/* INDEX STARTS */
+
+.cardBody {
+    background-color: #262626 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    padding: 20px 0;
+    border-radius: 0 !important;
+    border-top-left-radius: 1.25rem !important;
+    border-top-right-radius: 1.25rem !important;
+}
+
+#page-container {
+    box-shadow: 0 0 30px black;
+    text-align: center;
+    background-color: lightslategrey;
+    width: 1000px !important;
+    align-content: center;
+    align-items: center;
+    margin: 100px auto;
+    /*padding-bottom: 10px !important;*/
+    border-radius: 2rem 2rem 1.25rem 1.25rem;
+    position: relative;
+    /*min-height: 50vh;*/
+}
+
+#inner-page-container {
+    min-height: 50vh;
+}
+
+.message {
+
+}
+
+/*.cardInside {*/
+/*    margin: 10px auto;*/
+/*    width: 100%;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+#content-wrap {
+    /*display: inline;*/
+    word-wrap:break-word;
+    flex-shrink: 0;
+}
+
+.alertMessage {
+    font-weight: bold;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.cardRetail {
+    /*color: white;*/
+    background-color: black !important;
+    border-radius: 1.25rem !important;
+    margin: 21px 13px !important;
+    width: 200px !important;
+    height: 200px !important;
+    padding: 66px !important;
+    flex-direction: unset !important;
+
+}
+
+.indexProducts {
+    font-weight: lighter;
+    font-size: 30pt;
+}
+
+/* INDEX ENDS */
+
+
+
+/* LOGIN STARTS */
+
+.cardLogin {
+    text-align: center;
+    background-color: #262626 !important;
+    width: 300px !important;
+    align-content: center;
+    align-items: center;
+    margin: 100px auto;
+    border-radius: 2rem 2rem 1.25rem 1.25rem !important;
+}
+
+.antispam {
+    display: none;
+}
+
+/* LOGIN ENDS */
+
+/* REGISTER STARTS */
+
+.inputTitle {
+    color: lightgray;
+}
+.humanVerification {
+    color: white;
+}
+
+
+.register {
+    color: lightgray;
+    text-decoration: none;
+}
+.register:link { text-decoration: none; }
+.register:visited { text-decoration: none; }
+.register:hover { text-decoration: none; color: darkred; }
+.register:active { text-decoration: none; }
+
+.home {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.home:link { text-decoration: none; }
+.home:visited { text-decoration: none; }
+.home:hover { text-decoration: none; color: darkgreen}
+.home:active { text-decoration: none; }
+
+/* REGISTER ENDS */
+
+
+
+/* userHome ENDS */
+
+#inner-userHome-page-container {
+    min-height: 0vh !important;
+}
+
+.cardUser {
+    margin: 10px !important;
+    --bs-gutter-x: 0 !important;
+}
+
+.innerCardUser:link { text-decoration: none; }
+.innerCardUser:visited { text-decoration: none; }
+.innerCardUser:hover { text-decoration: none; background-color: #444d55 !important; }
+.innerCardUser:active { text-decoration: none; }
+
+
+.innerCardUser {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 2.25rem !important;
+}
+
+/* margin-top: calc(-1 * var(--bs-gutter-y)); */
+/* margin-right: calc(-.5 * var(--bs-gutter-x)); */
+/* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+
+hr {
+    display: block !important;
+    height: 1px !important;
+    border: 0 !important;
+    border-top: 5px solid white !important;
+    margin: 1.25rem 1.25rem !important;
+    padding: 0 !important;
+}
+.row>* {
+     flex-shrink: unset !important;
+}
+
+.myDetails {
+    font-weight: bold !important;
+}
+
+/*.editButton {*/
+/*    display: flex;*/
+/*    margin: 0 10px !important;*/
+/*    align-items: center;*/
+/*}*/
+
+input {
+    border: black;
+    border-radius: 0.25rem !important;
+}
+
+.dropbtn {
+    border-radius: 2.35rem !important;
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: black;
+}
+
+#myDropdown {
+    border-radius: .5rem !important;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: darkgray;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: max-height 0.15s ease-out;
+}
+
+.dropdown-content {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*.dropdown a:hover {*/
+/*    background-color: #ddd;*/
+/*}*/
+
+.show {
+    display: block;
+}
+
+.dropdownElements {
+    margin: 0 auto !important;
+    width: 50% !important;
+}
+
+.lastElement {
+    padding-bottom: 3%;
+}
+
+.formElement {
+    width: 100%;
+}
+
+.editElement {
+    margin: 0 0 0 5px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: lightslategrey;
+    border-radius: 0.25rem;
+    border: none;
+}
+/*.editElement:link { text-decoration: none; }*/
+/*.editElement:visited { text-decoration: none; }*/
+/*.editElement:hover { color: black; text-decoration: none; background-color:white !important; }*/
+/*.editElement:active { text-decoration: none; }*/
+
+/* userHome ENDS */
+
+
+/* products STARTS */
+
+.underMessage {
+    margin: 1.25rem 1.25rem !important;
+    background-color: white;
+    font-size: 20px;
+    font-weight: unset;
+}
+
+.containerCheckbox {
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 25px 30px 0px;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 0.25rem;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.discountButton {
+    margin: 0 0 1.25rem 0;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: limegreen;
+    border-radius: 2.25rem !important;
+    border: none;
+}
+
+.discountButton:link { text-decoration: none; }
+.discountButton:visited { text-decoration: none; }
+.discountButton:hover { text-decoration: none; color: white; background-color: green !important; }
+.discountButton:active { text-decoration: none; }
+
+.thankMessage {
+    padding: 20px;
+}
+
+.underMessage {
+    border-radius: 0.25rem;
+    padding: 15px;
+}
+/* products ENDS */
+
+
+
+/* footer STARTS */
+
+
+#footer {
+    /*margin-top: 5%;*/
+    background-color: #212529;
+
+/*    background-color: #212529;
+    height: auto; !* it will alternate the height based on the height of the contents inside it *!
+    clear: both;
+    position: relative;*/
+}
+
+.textFooter {
+    color: white;
+}
+
+.textFooter:link { text-decoration: none !important; }
+.textFooter:visited { text-decoration: none !important; }
+.textFooter:hover { text-decoration: none !important; color: gainsboro !important; }
+.textFooter:active { text-decoration: none !important; }
+
+/* FOOTER ENDS */
